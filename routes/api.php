@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MarkController;
 use App\Http\Controllers\WarehouseOrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/warehouserequest',[WarehouseOrderController::class,'order']);
 Route::get('/orderfulfilled/{neworder}',[WarehouseOrderController::class,'orderfulfilled']);
+
+//marksroute
+
+Route::post('/mark',[MarkController::class,'score']);
