@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MarkController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\WarehouseOrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,7 @@ Route::get('/orderfulfilled/{neworder}',[WarehouseOrderController::class,'orderf
 //MarkController
 
 Route::post('/mark',[MarkController::class,'score']);
+
+//PostController
+
+Route::post('/post',[PostController::class,'posting']);
