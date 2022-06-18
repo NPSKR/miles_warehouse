@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WarehouseOrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//WarehouseOrderContoller
+
+Route::post('/warehouserequest',[WarehouseOrderController::class,'order']);
+Route::get('/orderfulfilled/{neworder}',[WarehouseOrderController::class,'orderfulfilled']);

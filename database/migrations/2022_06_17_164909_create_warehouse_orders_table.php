@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('warehouse_orders', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('vendor_name');
             $table->string('sku_id');
             $table->integer('quantity');
             $table->string('status');
