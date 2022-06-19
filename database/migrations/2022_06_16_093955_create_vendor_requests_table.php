@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('warehouse_orders', function (Blueprint $table) {
+        Schema::create('vendor_requests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vendor_request_id')->references('id')->on('vendor_requests');
-            $table->string('sku_id');
-            $table->integer('quantity');
+            $table->string('vendor_name');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('warehouse_orders');
+        Schema::dropIfExists('vendor_requests');
     }
 };

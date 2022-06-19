@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //WarehouseOrderContoller
 
 Route::post('/warehouserequest',[WarehouseOrderController::class,'order']);
-Route::get('/orderfulfilled/{neworder}',[WarehouseOrderController::class,'orderfulfilled']);
+Route::put('/orderfulfilled/{neworder}',[WarehouseOrderController::class,'orderfulfilled']);
 
 //MarkController
 
